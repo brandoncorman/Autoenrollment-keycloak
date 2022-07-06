@@ -1,0 +1,36 @@
+#kc-page-title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.0125em;
+}
+
+.pf-c-button.pf-m-primary {
+    color: var(--pf-c-button--m-primary--Color);
+    background-color: rgb(72, 201, 176);
+}
+
+.card-pf {
+    border-top: 0px;
+}
+
+.alloxentric-logo {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-height: 33px;
+    max-width: 100px;
+}
+
+.bodyCenter {
+    margin: 0;
+    display: flex;
+    flex: 1 0 auto;
+    max-width: 100%;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-direction: column;
+    padding: 0px;
+}
