@@ -1,20 +1,69 @@
-#kc-page-title{
-    font-size: 1.25rem;
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
+/* #kc-page-title{
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0.0125em;
-}
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+} */
 
 .pf-c-button.pf-m-primary {
     color: var(--pf-c-button--m-primary--Color);
     background-color: rgb(72, 201, 176);
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    tab-size: 4;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-wrap: break-word;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    border-style: none;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.0892857143em;
+    justify-content: center;
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    text-indent: 0.0892857143em;
+    text-transform: uppercase;
+    transition-duration: 0.28s;
+    transition-property: box-shadow, transform, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: flex;
+    flex: 1 0 auto;
+    min-width: 100% !important;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    -webkit-appearance: button;
+    font-size: 0.875rem;
+    caret-color: #FFFFFF !important;
+    height: 36px;
+    padding: 0 16px;
+    border-color: rgb(72, 201, 176);
+}
+
+.pf-c-button.pf-m-primary:hover {
+    opacity: 0.9;
 }
 
 .card-pf {
+    margin: 0 auto;
+    box-shadow: var(--pf-global--BoxShadow--lg);
+    padding: 0 20px;
+    max-width: 500px;
     border-top: 0px;
+    border-color: #0066CC; /* default - IE compatibility */
+    border-color: var(--pf-global--primary-color--100);
+    border-radius: 4px;
 }
 
 .alloxentric-logo {
@@ -33,4 +82,21 @@
     align-items: stretch !important;
     flex-direction: column;
     padding: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+#kc-info-wrapper {
+    font-size: 13px;
+    padding: 15px 35px;
+    background-color: #F0F0F0;
+    border-radius: 0px 0px 4px 4px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+@media (max-width: 767px){
+    #kc-info-wrapper {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: transparent;
+    }
 }
