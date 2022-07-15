@@ -57,6 +57,7 @@
                     </#if>
                 </div>
             </div>
+
             <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('phoneNumber',properties.kcFormGroupErrorClass!)}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="user.attributes.phoneNumber" class="${properties.kcLabelClass!}">${msg("phoneNumber")}</label>
@@ -71,6 +72,30 @@
                     />
                 </div>
             </div>
+
+            <div class="form-group">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="user.attributes.dob" class="${properties.kcLabelClass!}">
+                    Date of birth</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="date" class="${properties.kcInputClass!}" 
+                    id="user.attributes.dob" name="user.attributes.dob" 
+                    value="${(register.formData['user.attributes.dob']!'')}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="user.attributes.country" class="${properties.kcLabelClass!}">
+                    Country</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <select class="form-select" aria-label="Default select example" id="user.attributes.country">
+                    </select>
+                </div>
+            </div>
+
 
             <#if !realm.registrationEmailAsUsername>
                 <div class="${properties.kcFormGroupClass!}">
@@ -152,4 +177,50 @@
             </div>
         </form>
     </#if>
+		
 </@layout.registrationLayout>
+
+<script>
+
+	(async ()=> {
+		async function getData(url) {
+					const response = await fetch(url);
+
+					return response.json();
+				}
+
+		const data = await getData("https://restcountries.com/v2/all?fields=name,flags");
+
+		var select = document.querySelector("select[class='form-select']");
+			for (var i = 0; i < data.length; i++) {
+				var option = document.createElement("option");
+				//option.setAttribute('value', "${(register.formData['user.attributes.country']!'')}");
+				/*option.setAttribute('name', 'user.attributes.country');*/
+				option.setAttribute('id', 'user.attributes.country');
+				option.textContent = data[i].name;
+                option.value = option.textContent = data[i].name;
+                option.text = data[i].name;
+				select.appendChild(option);
+		}
+		console.log(data.length);
+	})()
+		
+				
+
+			
+
+			/*var select = document.querySelector("select[class='form-select']");
+			for (var i = 1; i <= 9; i++) {
+				var option = document.createElement("option");
+				option.value = i;
+				option.textContent = paises.name;
+				select.appendChild(option);
+			}*/
+		 	
+
+			/*var option = document.createElement("option");
+			option.appendChild(document.createTextNode("testing"));
+			li.classList.add("list-group-item");
+			ul.appendChild(li);*/
+		
+	</script>
