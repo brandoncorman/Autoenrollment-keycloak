@@ -72,7 +72,7 @@
             <div class="form-group">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="user.attributes.dob" class="${properties.kcLabelClass!}">
-                      Date of birth
+                      ${msg("birthday")}
                     </label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
@@ -85,7 +85,7 @@
             <div class="form-group">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="user.attributes.country" class="${properties.kcLabelClass!}">
-                      Country
+                      ${msg("country")}
                     </label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
