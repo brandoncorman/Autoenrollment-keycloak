@@ -1,6 +1,6 @@
 #FileLock
-#Tue Jul 19 20:24:26 CLT 2022
-server=192.168.56.1\:51122
-hostName=LAPTOP-L1CFC7T2
+#Sun Jul 24 16:28:13 CLT 2022
+hostName=DESKTOP-QGR1P58
+id=18231e551a2db8c7d19c92e1dbcdc36d2874314c991
 method=file
-id=18218fdc4f99e21d46b7bedd4b4eb6fdeded0e330b9
+server=192.168.56.1\:13651
